@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--This is bean-->
+    <bean class="com.springcore.constinj.Certi" name="certi">
+        <constructor-arg>
+            <value>Java is a programming language</value>
+        </constructor-arg>
+    </bean>
+<bean class="com.springcore.constinj.Person" name="person">
+        <constructor-arg value="Ujjwal"/>
+        <constructor-arg value="25" type="int"/>
+    <constructor-arg ref="certi"/>
+
+
+</bean>
+    <bean class="com.springcore.constinj.Addition" name="add">
+        <constructor-arg value="12" type="double"/>
+        <constructor-arg value="34" type="double"/>
+
+    </bean>
+
+</beans>
